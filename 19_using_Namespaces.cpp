@@ -42,6 +42,11 @@ int main(){
     Outer::do_something();
     Outer::Inner::do_something();
 
+    //aliasing namespace
+    std::cout << "\nAfter Aliasing innermost to active" << std::endl;
+    namespace Active= Outer::Inner;
+    Active::do_something();
+
     return 0;
 
 }
